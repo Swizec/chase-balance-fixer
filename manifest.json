@@ -1,0 +1,12 @@
+{
+    "manifest_version": 2,
+    "name": "Chase balance fixer",
+    "version": "1",
+    "description": "Remove credit card balancer from your Chase balance so you don't get carried away",
+    "content_scripts": [{
+        "matches": "https://*.chase.com",
+        "js": ["fix-balance.js"],
+        "run_at": "document_Start"
+    }],
+    "permissions": ["tabs", "https://*.chase.com/*"]
+}
